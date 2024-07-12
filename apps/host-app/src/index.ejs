@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Micro Frontend Host App</title>
+</head>
+<body>
+  <div id="root"></div>
+
+  <!-- SystemJS -->
+  <script src="https://cdn.jsdelivr.net/npm/systemjs@6.10.3/dist/system.min.js"></script>
+  <!-- SystemJS Import Map -->
+  <script type="systemjs-importmap">
+    {
+      "imports": {
+        "single-spa": "https://cdn.jsdelivr.net/npm/single-spa@5.9.0/lib/system/single-spa.min.js",
+        "react": "https://cdn.jsdelivr.net/npm/react@18.3.1/umd/react.production.min.js",
+        "react-dom": "https://cdn.jsdelivr.net/npm/react-dom@18.3.1/umd/react-dom.production.min.js",
+        "mfe1": "http://localhost:4201/mfe1.js",
+        "mfe2": "http://localhost:4202/mfe2.js",
+        "mfe3": "http://localhost:4203/mfe3.js"
+      }
+    }
+  </script>
+</body>
+</html>
